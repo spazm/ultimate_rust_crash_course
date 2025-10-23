@@ -85,11 +85,13 @@ fn main() {
     //
     // Hint: There's a bit of commented-out code below the main function to help you get started.
 
-    // fortune(small_hat);
-    // fortune(2);
+    fortune(small_hat);
+    fortune(2);
 }
 
-// fn fortune<T: Colorful>(...
+fn fortune<T: Colorful>(item: T) {
+    println!("The color I see in your future is {}", item.color());
+}
 
 // A function used by some provided code.
 fn describe_three_hats(hat1: &Hat, hat2: &Hat, hat3: &Hat) {
