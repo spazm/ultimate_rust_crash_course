@@ -21,7 +21,7 @@ fn main() {
     let coods_arr = [coords.0, coords.1];
     print_array(coods_arr);
 
-    let series = [1, 1, 2, 3, 5, 8, 13];
+    let series: [i32; 7] = [1, 1, 2, 3, 5, 8, 13];
     // 3. Make the `ding` function happy by passing it the value 13 out of the `series` array.
     // Use array indexing.  Done correctly, `cargo run` will produce the additional output
     // "Ding, you found 13!"
@@ -29,7 +29,8 @@ fn main() {
     //ding(...);
     ding(series[6]);
 
-    let mess = ([3, 2], 3.14, [(false, -3), (true, -100)], 5, "candy");
+    let mess: ([i32; 2], f64, [(bool, i32); 2], i32, &str) =
+        ([3, 2], 3.14, [(false, -3), (true, -100)], 5, "candy");
     // 4. Pass the `on_off` function the value `true` from the variable `mess`.  Done correctly,
     // `cargo run` will produce the additional output "Lights are on!" I'll get you started:
     //
