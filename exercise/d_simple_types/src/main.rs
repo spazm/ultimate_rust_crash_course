@@ -10,6 +10,7 @@ fn main() {
     // look at how it is defined.
     //
     //print_difference( ... );   // Uncomment and finish this line
+    print_difference(coords.0, coords.1);
 
     // 2. We want to use the `print_array` function to print coords...but coords isn't an array!
     // Create an array of type [f64; 2] and initialize it to contain the
@@ -17,6 +18,8 @@ fn main() {
     //
     //let coords_arr...               // create an array literal out of parts of `coord` here
     //print_array(coords_arr);        // and pass it in here (this line doesn't need to change)
+    let coods_arr = [coords.0, coords.1];
+    print_array(coods_arr);
 
     let series = [1, 1, 2, 3, 5, 8, 13];
     // 3. Make the `ding` function happy by passing it the value 13 out of the `series` array.
@@ -24,19 +27,21 @@ fn main() {
     // "Ding, you found 13!"
     //
     //ding(...);
+    ding(series[6]);
 
     let mess = ([3, 2], 3.14, [(false, -3), (true, -100)], 5, "candy");
     // 4. Pass the `on_off` function the value `true` from the variable `mess`.  Done correctly,
     // `cargo run` will produce the additional output "Lights are on!" I'll get you started:
     //
     //on_off(mess.2 ...);
+    on_off(mess.2[1].0);
 
     // 5. (Part A)
     //
     // Uncomment the line below, run the code, and examine the output. Then go refactor the
     // `print_distance` function according to the instructions in the comments inside that function.
 
-    // print_distance(coords);
+    print_distance(coords);
 }
 
 // 5. (Part B)
