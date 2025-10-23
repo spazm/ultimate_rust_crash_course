@@ -10,6 +10,9 @@
 trait Colorful {
     fn color(&self) -> String;
 }
+trait EvenOdd {
+    fn is_even(&self) -> bool;
+}
 
 // 1b. Implement the `Colorful` trait for the `Hat` struct:
 //
@@ -35,7 +38,12 @@ impl Colorful for Hat {
 }
 impl Colorful for i32 {
     fn color(&self) -> String {
-        if is_even(*self) { "orange" } else { "purple" }.to_string()
+        if self.is_even() { "orange" } else { "purple" }.to_string()
+    }
+}
+impl EvenOdd for i32 {
+    fn is_even(&self) -> bool {
+        self % 2 == 0
     }
 }
 
@@ -99,6 +107,6 @@ fn describe_three_hats(hat1: &Hat, hat2: &Hat, hat3: &Hat) {
 
 // You can use this function to check if a number is even (true) or odd (false).
 // You should comment out this function for #3.
-fn is_even(number: i32) -> bool {
-    number % 2 == 0
-}
+// fn is_even(number: i32) -> bool {
+//     number % 2 == 0
+// }
