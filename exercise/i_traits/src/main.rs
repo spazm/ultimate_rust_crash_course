@@ -33,6 +33,11 @@ impl Colorful for Hat {
         }
     }
 }
+impl Colorful for i32 {
+    fn color(&self) -> String {
+        if is_even(*self) { "orange" } else { "purple" }.to_string()
+    }
+}
 
 fn main() {
     // 1c. Uncomment and run the code below. If you correctly implemented Colorful for Hat, then
@@ -52,8 +57,8 @@ fn main() {
     //
     // Hint: You may want to use the `is_even` function (see the bottom of this file).
 
-    // println!("4 is {}", 4.color());
-    // println!("5 is {}", 5.color());
+    println!("4 is {}", 4.color());
+    println!("5 is {}", 5.color());
 
     // 3. Let's replace the is_even function with a trait implementation!
     //
