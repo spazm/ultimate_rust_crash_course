@@ -36,7 +36,24 @@ fn main() {
     // for all
     // great men
 
-    let saying = "Now is\nthe time\nfor all\ngreat men";
+    // ending with a \ removes the newline and leading whitespace from next line.
+    // this looks like an annoying way to write an indented string.  And doesn't fix the
+    // issue of varying levels of indent.  What is the (probably macro) way of getting
+    // the same as the python textwrap.dedent()?
+    // With the macros from the `dedent` or `indoc` crates;
+    /*
+     * use dedent::dedent;
+     * let saying = dedent!("\
+     *     Now is
+     *     the time
+     *     for all
+     *     great men");
+     */
+    let saying = "\
+        Now is\n\
+        the time\n\
+        for all\n\
+        great men";
     println!("{saying}");
 
     // Challenge: Change the string literal in #3 so that it:
